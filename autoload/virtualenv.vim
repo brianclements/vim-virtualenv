@@ -45,6 +45,7 @@ import vim
 current_venv = vim.eval('g:virtualenv_current_venv')
 EOF
     let g:virtualenv_name = name
+    let $VIRTUAL_ENV = g:virtualenv_directory.'/'.g:virtualenv_name
 endfunction
 
 function! virtualenv#deactivate() "{{{1
@@ -68,6 +69,8 @@ except:
     pass
 EOF
     unlet! g:virtualenv_name
+    unlet! g:virtualenv_path
+    let $VIRTUAL_ENV = '' " can't delete parent variables
 endfunction
 
 function! virtualenv#list() "{{{1

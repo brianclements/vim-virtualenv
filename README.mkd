@@ -51,6 +51,11 @@ of virtualenvs depending on what your current directory is; a project-specific
 set of virtualenvs located in the relative location, or a general set located
 in either of the other two fallback locations.
 
+=======
+Or, for those with a properly configured Powerline (the virtualenv segment is not enabled by default), your virtualenv indicator will toggle on or off accordingly.
+
+![powerline_indicator](http://i.imgur.com/t6pGg7w.png "Powerline Indicator Toggled")
+
 For more detailed help
 
     :help virtualenv
