@@ -25,9 +25,14 @@ if !exists("g:virtualenv_directory")
     else
         let g:virtualenv_directory = '~/.virtualenvs'
     endif
+else
+    let g:virtualenv_directory_orig = g:virtualenv_directory
+    if !isdirectory(g:virtualenv_directory)
+        let g:virtualenv_directory = '~/.virtualenvs'
+    endif
 endif
 
-let g:virtualenv_directory = expand(g:virtualenv_directory)
+call virtualenv#rel_dir_resolve()
 
 if len($VIRTUAL_ENV) != 0
     let g:virtualenv_inherited_venv_bin = $VIRTUAL_ENV.'/bin'
