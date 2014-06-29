@@ -41,6 +41,10 @@ You can even show the current virtualenv in the statusline with the included fun
 
 ![statusline](http://i.imgur.com/oxE70.png "Statusline")
 
+Or, for those with a properly configured Powerline (the virtualenv segment is not enabled by default), your virtualenv indicator will toggle on or off accordingly.
+
+![powerline_indicator](http://i.imgur.com/t6pGg7w.png "Powerline Indicator Toggled")
+
 The plugin also supports relative paths for the location of your virtualenvs.
 Locations such as `./venv` or `../venv` are supported in case you like to
 package your virtualenvs inside or relative to your project code. Care is taken
@@ -51,12 +55,6 @@ of virtualenvs depending on what your current directory is; a project-specific
 set of virtualenvs located in the relative location, or a general set located
 in either of the other two fallback locations.
 
-=======
-Or, for those with a properly configured Powerline (the virtualenv segment is not enabled by default), your virtualenv indicator will toggle on or off accordingly.
-
-![powerline_indicator](http://i.imgur.com/t6pGg7w.png "Powerline Indicator Toggled")
-
 For more detailed help
 
     :help virtualenv
-
