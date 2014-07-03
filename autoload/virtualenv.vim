@@ -104,7 +104,6 @@ function! virtualenv#names(prefix) "{{{1
 endfunction
 
 function! virtualenv#rel_dir_resolve() "{{{1
-    exec 'cd' fnameescape(expand('%:p:h'))
     if has('unix')
         let g:virtualenv_directory_test = system("echo -n $(readlink -mn \"".g:virtualenv_directory_orig."\")")
     elseif has('macunix')

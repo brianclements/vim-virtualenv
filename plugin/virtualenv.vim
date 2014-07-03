@@ -42,6 +42,8 @@ else
     let g:virtualenv_current_venv = ''
 endif
 
+call virtualenv#rel_dir_resolve()
+
 command! -bar VirtualEnvList :call virtualenv#list()
 command! -bar VirtualEnvDeactivate :call virtualenv#deactivate()
 command! -bar -nargs=? -complete=customlist,s:CompleteVirtualEnv VirtualEnvActivate :call virtualenv#activate(<q-args>)
